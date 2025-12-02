@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Skill Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div style="text-align:right;">
+      <button onclick="logout()" class="delete-btn">Logout</button>
+    </div>
+    <h1>Student Skill Tracker and Analyzer</h1>
+
+    <div class="input-section">
+      <input type="text" id="studentName" placeholder="Enter student name" />
+      <button onclick="addStudent()">Add Student</button>
+    </div>
+
+    <ul id="studentList"></ul>
+
+    <div id="studentDashboard" style="display:none;">
+      <h2 id="studentTitle"></h2>
+
+      <div class="skill-input">
+        <input type="text" id="skillName" placeholder="Enter skill name (e.g., JavaScript, HTML)" />
+        <input type="number" id="skillLevel" placeholder="Enter level (0-100)" min="0" max="100" />
+        <button onclick="addSkill()">Add Skill</button>
+      </div>
+
+      <div id="skillsList"></div>
+      <canvas id="skillsChart"></canvas>
+      <div id="analysis"></div>
+
+      <div id="assignmentSection" style="margin-top: 30px;">
+        <h3>📝 Skill-Based MCQ Assignment</h3>
+        <button onclick="startAssignment()">Start Assignment</button>
+
+        <div id="assignmentArea" style="display:none; margin-top:15px;">
+          <h4 id="assignmentTitle"></h4>
+          <div id="mcqContainer"></div>
+          <button id="submitAssignmentBtn" style="margin-top:15px; display:none;" onclick="submitAssignment()">Submit Assignment</button>
+        </div>
+
+        <div id="assignmentResult" style="margin-top:15px;"></div>
+
+        <h3>📜 Assignment History</h3>
+        <table id="assignmentHistoryTable">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Skill</th>
+              <th>Score (%)</th>
+            </tr>
+          </thead>
+          <tbody id="assignmentHistoryBody"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <script src="auth.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
