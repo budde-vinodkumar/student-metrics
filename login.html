@@ -4,18 +4,55 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login - Skill Tracker</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container auth-box">
-    <h2>Login</h2>
-    <form id="loginForm">
-      <input type="text" id="loginUsername" placeholder="Username" required>
-      <input type="password" id="loginPassword" placeholder="Password" required>
-      <button type="submit">Login</button>
-    </form>
-    <p>Don't have an account? <a href="register.html">Register</a></p>
+  <div class="background-gradient">
+    <div class="container auth-box">
+      <div class="logo-area">
+        <div class="logo-circle">ST</div>
+        <div class="logo-text">
+          <h1>Skill Tracker</h1>
+          <p>Level up your skills every day</p>
+        </div>
+      </div>
+
+      <h2 class="form-title">Welcome Back 👋</h2>
+      <p class="form-subtitle">Login to continue tracking your progress</p>
+
+      <form id="loginForm" class="form">
+        <div class="input-group">
+          <label for="loginUsername">Username</label>
+          <input type="text" id="loginUsername" placeholder="Enter your username" required>
+        </div>
+
+        <div class="input-group">
+          <label for="loginPassword">Password</label>
+          <input type="password" id="loginPassword" placeholder="Enter your password" required>
+        </div>
+
+        <div class="extras">
+          <label class="remember-me">
+            <input type="checkbox" id="rememberMe">
+            Remember me
+          </label>
+          <a href="#" class="forgot-link">Forgot password?</a>
+        </div>
+
+        <button type="submit" class="btn-primary">Login</button>
+      </form>
+
+      <p class="switch-text">
+        Don't have an account?
+        <a href="register.html" class="link-highlight">Create one</a>
+      </p>
+    </div>
   </div>
+
   <script src="auth.js"></script>
 </body>
 </html>
