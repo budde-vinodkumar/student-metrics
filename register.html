@@ -4,18 +4,50 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Register - Skill Tracker</title>
+
+  <!-- Google Font (same as login) -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container auth-box">
-    <h2>Register</h2>
-    <form id="registerForm">
-      <input type="text" id="regUsername" placeholder="Username" required>
-      <input type="password" id="regPassword" placeholder="Password" required>
-      <button type="submit">Register</button>
-    </form>
-    <p>Already have an account? <a href="login.html">Login</a></p>
+  <div class="background-gradient">
+    <div class="container auth-box">
+      <div class="logo-area">
+        <div class="logo-circle">ST</div>
+        <div class="logo-text">
+          <h1>Skill Tracker</h1>
+          <p>Create your account and start growing</p>
+        </div>
+      </div>
+
+      <h2 class="form-title">Create Account ✨</h2>
+      <p class="form-subtitle">Join Skill Tracker and keep an eye on your progress</p>
+
+      <form id="registerForm" class="form">
+        <div class="input-group">
+          <label for="regUsername">Username</label>
+          <input type="text" id="regUsername" placeholder="Choose a username" required>
+        </div>
+
+        <div class="input-group">
+          <label for="regPassword">Password</label>
+          <input type="password" id="regPassword" placeholder="Create a password" required>
+        </div>
+
+        <!-- Optional: a small note under password -->
+        <p class="hint-text">Use at least 6 characters for better security.</p>
+
+        <button type="submit" class="btn-primary">Register</button>
+      </form>
+
+      <p class="switch-text">
+        Already have an account?
+        <a href="login.html" class="link-highlight">Login here</a>
+      </p>
+    </div>
   </div>
+
   <script src="auth.js"></script>
 </body>
 </html>
